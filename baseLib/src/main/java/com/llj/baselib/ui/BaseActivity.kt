@@ -16,7 +16,7 @@ open class BaseActivity<VB : ViewBinding>(private val inflate: (inflater: Layout
     AppCompatActivity() {
 
     private var _mBinding: VB?= null
-    var mBinding = _mBinding!!
+    val mBinding get() = _mBinding!!
 
     open fun initCreate() {}
 

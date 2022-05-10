@@ -16,7 +16,7 @@ open class BaseFragment<VB : ViewBinding>(
 ) : Fragment() {
 
     private var _mBinding: VB? = null
-    var mBinding = _mBinding!!
+    val mBinding get() = _mBinding!!
 
     open fun initCreateView() {}
 

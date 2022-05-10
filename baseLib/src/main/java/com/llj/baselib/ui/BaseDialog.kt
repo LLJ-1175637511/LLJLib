@@ -16,7 +16,7 @@ open class BaseDialog<VB : ViewBinding>(
 ) : DialogFragment() {
 
     private var _mBinding: VB ?= null
-    var mBinding = _mBinding!!
+    val mBinding get() = _mBinding!!
 
     open fun initCreate() {}
 
