@@ -33,7 +33,7 @@ open class BaseDialog<VB : ViewBinding>(
         savedInstanceState: Bundle?
     ): View {
         initCreateView()
-        return inflate.invoke(inflater,container,false).also { mBinding = it }.root
+        return inflate.invoke(inflater,container,false).also { _mBinding = it }.root
     }
 
     fun destroyDialog() {

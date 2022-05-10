@@ -22,7 +22,7 @@ open class BaseActivity<VB : ViewBinding>(private val inflate: (inflater: Layout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mBinding = inflate.invoke(layoutInflater)
+        _mBinding = inflate.invoke(layoutInflater)
         setContentView(mBinding.root)
         initCreate()
     }

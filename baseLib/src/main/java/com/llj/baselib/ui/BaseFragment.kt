@@ -28,7 +28,7 @@ open class BaseFragment<VB : ViewBinding>(
         savedInstanceState: Bundle?
     ): View {
         initCreateView()
-        return inflate.invoke(inflater, container, false).also { mBinding = it }.root
+        return inflate.invoke(inflater, container, false).also { _mBinding = it }.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
